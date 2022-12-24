@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap22</title>
+</head>
+<body>
+<p>Giai phuong trinh bac 2 ax^2 + bx + c = 0</p>
+<script>
+  let a = +prompt('Nhap a')
+  let b = +prompt('Nhap b')
+  let c = +prompt('Nhap c')
+  delta = Math.pow(b,2) - 4*a*c
+  document.write('delta=' + delta )
+  document.write('<br/>')
+  if (delta < 0) {
+    document.write('phuong trinh vo nghiem')
+  } else if(delta == 0) {
+    x = -b / 2 * a
+    document.write('phuong trinh co nghiem=' + x )
+  } else {
+    x1 = (-b + Math.sqrt(delta) ) / 2 * a
+    x2 = (-b - Math.sqrt(delta) ) / 2 * a
+    document.write('phuong trinh co 2 nghiem :' + 'x1 =' + x1 + '   x2=' + x2)
+  }
+</script>
+</body>
+</html>
