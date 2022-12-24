@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap25</title>
+</head>
+<body>
+<h2>Bảng bậc thang tiền điên</h2>
+<ul>
+  <li>Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh</li>
+  <li>Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh</li>
+  <li>Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh</li>
+  <li>Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh</li>
+  <li>Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh</li>
+  <li>Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh</li>
+</ul>
+<script>
+ let a = +prompt('Nhap so kwh dien tieu thu')
+ document.write('Sô kwh tiêu thụ là: ' + a)
+ document.write('<br>')
+ let a1 = 50 * 1.678
+ let a2 = a1 + 50 * 1.734
+ let a3 = a2 + 100 * 2.014
+ let a4 = a3 + 100 * 2.536
+ let a5 = a4 + 100 * 2.834
+ if(a < 51) {
+   Total = a * 1.678
+   document.write('Tiền điện là :' + Total)
+ } else if(a < 101) {
+   Total = a1 + (a - 50) * 1.734
+   document.write('Tiền điện là :' + Total)
+ } else if(a < 201) {
+   Total = a2 + (a - 100) * 2.014
+   document.write('Tiền điện là :' + Total)
+ } else if(a < 301) {
+   Total = a3 + (a - 200) * 2.536
+   document.write('Tiền điện là :' + Total)
+ } else if(a < 401) {
+   Total = a4 + (a - 300) * 2.834
+   document.write('Tiền điện là :' + Total)
+ } else {
+   Total = a5 + (a - 400) * 2.927
+   document.write('Tiền điện là :' + Total)
+ }
+</script>
+</body>
+</html>
