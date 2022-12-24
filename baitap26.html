@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap26</title>
+</head>
+<body>
+<h2>Tính thuế thu nhập cá nhân theo tháng / năm</h2>
+<table border="1">
+  <tr>
+    <th>Bậc thuế</th>
+    <th>Phần thu nhập tính thuế/ năm (triệu đồng)</th>
+    <th>Phần thu nhập tính thuế/ tháng (triệu đồng)</th>
+    <th>Thuế suất (%)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Đến 60</td>
+    <td>Đến 5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Trên 60 -120</td>
+    <td>Trên 5 -10</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Trên 120 -216</td>
+    <td>Trên 10 -18</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Trên 216 -384</td>
+    <td>Trên 18 -32</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Trên 384 -624</td>
+    <td>Trên 32 -52</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Trên 624</td>
+    <td>Trên 52</td>
+    <td>30</td>
+  </tr>
+</table>
+<script>
+ let a = +prompt("Thu nhập tính thuế trong tháng của bạn là bao nhiêu (đơn vị triệu)")
+ document.write('Tổng thu nhâp tính thuế là :' + a )
+ document.write("<br>")
+ if(a < 5) {
+   thue =  a * 0.05
+ } else if(a < 10) {
+   thue = a * 0.1 - 0.25
+ } else if(a < 18) {
+   thue = a * 0.15 - 0.75
+ } else if(a < 32) {
+   thue = a * 0.2 - 1.65
+ } else if(a < 52) {
+   thue = a * 0.25 - 3.25
+ } else {
+   thue = a * 0.3 - 5.85
+ }
+ document.write('Thuế thu nhâp cá nhân phải nộp là :' + thue )
+</script>
+</body>
+</html>
