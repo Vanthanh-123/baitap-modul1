@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>baitap27</title>
+</head>
+<body>
+<h2>Tính lãi xuất ngân hàng</h2>
+<p>Công thức tính lãi xuât ngân hàng: A= P x (1+r)^t</p>
+<ul>
+  <li>A: giá trị tương lai</li>
+  <li>P : số tiền vốn gốc ban đầu</li>
+  <li>r : lãi suất hàng tháng</li>
+  <li>t : số tháng tiền đươc gửi</li>
+</ul>
+<table>
+  <tr>
+    <td><label for="a"><b>Nhâp số tiền gởi ngân hàng</b></label>
+    <td> <input type="text" id="a" placeholder="VND"></td>
+  </tr>
+<tr>
+  <td><label for="b"><b>Nhap só thang cho vay</b></label></td>
+  <td><input type="text" id="b" placeholder="Số tháng"></td>
+</tr>
+<tr>
+  <td><label for="c"><b>Nhap lai xuât hang năm</b></label></td>
+  <td><input type="text" id="c" placeholder="%"> <br></td>
+</tr>
+</table>
+<button onclick="Submit()">Submit</button>
+</body>
+<script>
+  function  Submit() {
+    let P = +(document.getElementById("a").value)
+    let T = +(document.getElementById("b").value)
+    let R = +(document.getElementById("c").value)
+    let A = P * Math.pow((1 + R/1200), T)
+    alert('Số Tiền Cả Gôc + lãi sau ' + T + ' tháng bạn nhận được là :' + A)
+  }
+</script>
+</html>
