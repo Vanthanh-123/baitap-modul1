@@ -9,10 +9,12 @@
   let f1 = 0
   let f2 = 1
   let f3
-  document.write(f1 + " " + f2 + " " +  " ")
-  for (i=1; i<19; i++) {
+  for (i=1; ; i++) {
     f3 = f2 + f1
-    document.write(f3 + " ")
+    if (f3 % 5 == 0) {
+      document.write(f3)
+      break
+    }
     f1 = f2
     f2 = f3
   }
