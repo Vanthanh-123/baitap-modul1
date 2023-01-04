@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap51</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td><label for="a">Nhập cạnh dài</label></td>
+    <td><input type="text" id="a"><br></td>
+  </tr>
+  <tr>
+    <td><label for="b">Nhập cạnh ngắn</label></td>
+    <td><input type="text" id="b"><br></td>
+  </tr>
+</table>
+<button onclick="submit()">Submit</button>
+<script>
+  function submit() {
+    let cd = +document.getElementById("a").value
+    let cn = +document.getElementById("b").value
+      let j
+      let i
+      let a
+      for (i = 0; i < cd ; i++) {
+          document.write("*")
+      }
+      document.write("<br>")
+
+      for (a = 0; a < cn - 2 ; a++) {
+          document.write("*")
+          for (j = 0; j < cd-2 ; j++) {
+              document.write("&nbsp;&nbsp;")
+          }
+          document.write("*")
+          document.write("<br>")
+      }
+      for (i = 0; i < cd ; i++) {
+          document.write("*")
+      }
+  }
+</script>
+</body>
+</html>
