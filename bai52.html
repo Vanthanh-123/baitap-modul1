@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap52</title>
+</head>
+<body>
+<h2>Công thức tính lãi xuất ngân hàng</h2>
+<p>A= P x (1+r/12)^t</p>
+<table>
+  <tr>
+    <td><label for="a">Nhập số tiền gởi ban đâu</label></td>
+    <td><input type="text" id="a" placeholder="VND"></td>
+  </tr>
+  <tr>
+    <td><label for="b">Nhập lãi xuất hằng năm</label></td>
+    <td><input type="text" id="b" placeholder="%"></td>
+  </tr>
+  <tr>
+    <td><label for="c">Nhập số tháng muốn gởi </label></td>
+  <td><input type="text" id="c" placeholder="tháng"></td>
+  </tr>
+</table>
+<button onclick="submit()">Submit</button>
+<script>
+  function submit() {
+    let A = +document.getElementById("a").value
+    let B = +document.getElementById("b").value
+    let C = +document.getElementById("c").value
+    for (i = 0; i < C; i++) {
+      A *= 1 + B/1200
+    }
+    alert("Số tiền nhận được sau " + C + " tháng là: " + A )
+  }
+  document.getElementById(submid)("Số tiền nhận được sau" + C + "là" + A )
+</script>
+</body>
+</html>
