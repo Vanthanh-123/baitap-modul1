@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>baitap39</title>
+  <meta charset="UTF-8">
+  <title>baitap39</title>
 </head>
 <body>
 <script>
@@ -11,20 +11,15 @@
   let N = 2
   document.write("2,")
   do {
-      if (N < 8) {
-          for (let i = 2; i < N ; i++) {
-              if (N % i != 0) {
-                  document.write(N + ",")
-                  count += 1
-              }
-              break
-          }
-      }
-       else if (N % 2 !=0 && N % 3 !=0 && N % 5 !=0 && N % 7 !=0) {
-          document.write(N + ",")
-          count += 1               // nếu N là số nguyên tó tiếp theo thì đếm + 1
-      }
-      N += 1                       // xét từng số tự nhiên bắt đầu từ số 2
+    if (N < 8 && (N % 2 != 0)) {
+      document.write(N + ",")
+      count += 1
+    }
+    else if (N % 2 !=0 && N % 3 !=0 && N % 5 !=0 && N % 7 !=0) {
+      document.write(N + ",")
+      count += 1                 // nếu N là số nguyên tó tiếp theo thì đếm + 1
+    }
+    N += 1                       // xét từng số tự nhiên bắt đầu từ số 2
   } while ( count < numbers - 1)
 </script>
 </body>
