@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap55</title>
+</head>
+<body>
+<h5>Nhập vao 10 phần tử là số nguyên để tạo mảng</h5>
+<input type="text" id="a"/>
+<input type="button" id="add" value="Add" onclick="add()"/>
+<input type="button" id="display" value="Display" onclick="Display()"/>
+<div id="result"></div>
+<h5>Kiểm tra xem có bao nhiều phân tử >= 10</h5>
+<input type="button" id="check" value="check" onclick="check()"/>
+<div id="result1"></div>
+<script>
+    let array = []
+    let x = 0
+    function add() {
+        array[x] = document.getElementById("a").value
+        x++
+        document.getElementById("a").value = ''
+    }
+    function Display() {
+        document.getElementById("result").innerHTML = ("array = [" + array + ']')
+    }
+    function check() {
+        index = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] >= 10) {
+                index++
+            }
+        }
+        document.getElementById("result1").innerHTML = index
+    }
+</script>
+</body>
+</html>
