@@ -30,7 +30,8 @@
     for (let i = 0; i < array.length; i++) {
       if (v == array[i]) {
         array.splice(i,1)
-        document.getElementById('result1').innerHTML = ("V is in the array" + "<br>" + " array = [" + array + "]")
+        document.getElementById('result1').innerHTML = "V is in the array"
+        break
       }
       else {
         document.getElementById('result1').innerHTML = "V is not in the array"
