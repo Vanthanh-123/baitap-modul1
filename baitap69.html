@@ -10,11 +10,12 @@ let a = +prompt("nhập vào số lươngj phần tử của mảng Arr")
 let arr = []
     for (let i = 0; i < a; i++) {
     arr[i] = prompt('nhập vào phân tử thứ ' + (i +1))
-        if (arr[i] == '-') {
-            arr[i].replace('-', '_')
         }
-    }
-    document.write("Mảng kí tự sau khi fix là " + arr)
+let newarr = []
+    for (let j = 0; j < a; j++) {
+    newarr[j] = arr[j].replace('-', '_')
+}
+    document.write("Mảng kí tự sau khi fix là " + newarr)
 </script>
 </body>
 </html>
