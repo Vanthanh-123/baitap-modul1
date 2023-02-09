@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap62</title>
+</head>
+<body>
+<script>
+    let a = []
+    let max
+    for (let i = 0; i < 10; i++) {
+        a[i] = +prompt("Nhập phần tử thứ" + (i+1))
+    }
+    for (let i = 0; i < 9; i++) {
+        for (let j = i+1; j < 10; j++) {
+            if(a[i] < a[j]) {
+                max = a[i]
+                a[i] = a[j]
+                a[j] = max
+            }
+        }
+    }
+    document.write('Chuỗi sau khi fix là : ' + a)
+</script>
+</body>
+</html>
