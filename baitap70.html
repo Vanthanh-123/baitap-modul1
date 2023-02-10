@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap70</title>
+</head>
+<body>
+<script>
+  function isPrime(number) {
+      let count = 0
+      for (let i = 2; i < number ; i++) {
+          if (number % i == 0) {
+              count++
+          }
+      }
+      if (count == 0) {
+          alert("a is prime number")
+      }
+      else {
+          alert("a not is prime number")
+      }
+  }
+  let a = +prompt("Nhập vào 1 số nguyên bất kì lớn hơn 2:")
+  isPrime(a)
+</script>
+</body>
+</html>
