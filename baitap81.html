@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap81</title>
+</head>
+<body>
+<script>
+  function compare(num1, num2, num3) {
+    let min = num1 < num2 ? num1 : num2
+    min = min < num3 ? min : num3
+    return min
+  }
+  let a = +prompt('Nhập vào sô nguuyên thứ 1')
+  let b = +prompt('Nhập vào sô nguuyên thứ 2')
+  let c = +prompt('Nhập vào sô nguuyên thứ 3')
+  alert("Sô nguyên lớn nhất trong 3 số là " + compare(a, b, c))
+  compare()
+</script>
+</body>
+</html>
