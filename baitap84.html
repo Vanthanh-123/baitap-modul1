@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap84</title>
+</head>
+<body>
+<script>
+  function reverseArray(arr) {
+    let newArray = []
+    for (let i = 0; i < arr.length; i++) {
+      newArray[i] = arr[arr.length-1-i]
+    }
+    document.write(newArray)
+  }
+  let array = []
+  let a = +prompt('Nhập vào số phân tử trong mang')
+  for (i = 0; i < a; i++) {
+    array[i] = +prompt('Nhập phân tử thứ' + (i+1))
+  }
+  reverseArray(array)
+</script>
+</body>
+</html>
