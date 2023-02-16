@@ -6,20 +6,12 @@
 </head>
 <body>
 <script>
-  let firstNumber = +prompt("Nhap vao so thu nhat")
-  let secondNumber = +prompt("Nhap vao so thu hai")
-  if (firstNumber > secondNumber) {
-      notification();
-  }
-  else {
-      document.write("Tong 2 so bang : " + sum(firstNumber, secondNumber))
-  }
-  function notification() {
-      alert("so thu nhat lon hon so thu hai")
-  }
-  function sum(a, b) {
-      return a + b
-  }
+    function check(num) {
+        num++
+        return num
+    }
+    let argumentNum = +prompt("Nhập vào 1 số bất kì")
+    document.write("hàm sau khi trả về là " + check(argumentNum))
 </script>
 </body>
 </html>
