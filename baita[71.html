@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap71</title>
+</head>
+<body>
+<script>
+  let meter, feet
+  function feetToMeter() {
+    feet = document.getElementById('feet').value
+    meter = 0.305 * feet
+    document.getElementById('resultMeter').innerHTML = meter + " meter"
+  }function meterToFeet() {
+    meter = document.getElementById('meter').value
+    feet = meter * 3.279
+    document.getElementById('resultFeet').innerHTML = feet + " feet"
+  }
+</script>
+  <table>
+    <tr>
+      <th><input type="text" id="feet" placeholder="Feet"></th>
+      <th>
+        <input type="button" id="convertFeet" value="convertFeet" onclick="feetToMeter()"/>
+      </th>
+      <th><div id="resultMeter"></div></th>
+    </tr>
+    <tr>
+      <th><input type="text" id="meter" placeholder="Meter"></th>
+      <th>
+        <input type="button" id="convertMeter" value="convertMeter" onclick="meterToFeet()"/>
+      </th>
+      <th><div id="resultFeet"></div></th>
+    </tr>
+  </table>
+</body>
+</html>
